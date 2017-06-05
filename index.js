@@ -3,6 +3,6 @@
 
 var Plankton = require('./namespace').Plankton;
 
-require('./src/forEach');
+require('./src/foreach');
 
 module.exports = Plankton;

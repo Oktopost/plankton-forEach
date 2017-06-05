@@ -26,13 +26,13 @@ require('../namespace').namespace('Plankton', function (root)
 	
 	
 	/**
-	 * @name Plankton.forEach
+	 * @name Plankton.foreach
 	 * 
 	 * @param {Array|Object} subject
 	 * @param {function(*)} callback
 	 * @param {*=} scope
 	 */
-	var forEach = function (subject, callback, scope)
+	var foreach = function (subject, callback, scope)
 	{
 		var method = getForEachForSubject(subject);
 		method.value(subject, callback, scope);
@@ -43,14 +43,14 @@ require('../namespace').namespace('Plankton', function (root)
 	 * @param {function(*)} callback
 	 * @param {*=} scope
 	 */
-	forEach.value = forEach;
+	foreach.value = foreach;
 	
 	/**
 	 * @param {Array} subject
 	 * @param {function(Number)} callback
 	 * @param {*=} scope
 	 */
-	forEach.key = function (subject, callback, scope)
+	foreach.key = function (subject, callback, scope)
 	{
 		var method = getForEachForSubject(subject);
 		method.key(subject, callback, scope);
@@ -61,7 +61,7 @@ require('../namespace').namespace('Plankton', function (root)
 	 * @param {function(Number *)} callback
 	 * @param {*=} scope
 	 */
-	forEach.pair = function(subject, callback, scope)
+	foreach.pair = function(subject, callback, scope)
 	{
 		var method = getForEachForSubject(subject);
 		method.pair(subject, callback, scope);
@@ -72,12 +72,12 @@ require('../namespace').namespace('Plankton', function (root)
 	 * @param {function(Array)} callback
 	 * @param {*=} scope
 	 */
-	forEach.item = function(subject, callback, scope)
+	foreach.item = function(subject, callback, scope)
 	{
 		var method = getForEachForSubject(subject);
 		method.item(subject, callback, scope);
 	};
 	
 	
-	this.forEach = forEach;
+	this.foreach = foreach;
 });
