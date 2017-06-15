@@ -14,8 +14,8 @@ suite('foreach module', () =>
 	{
 		test('array subject', () =>
 		{
-			let result = [];
-			let subject = ['b', 'c'];
+			var result = [];
+			var subject = ['b', 'c'];
 			
 			subject.e = 1;
 			
@@ -25,20 +25,21 @@ suite('foreach module', () =>
 		
 		test('object subject', () =>
 		{
-			let result = [];
+			var result = [];
 			foreach.value({'b': 'c', 'd': 'e'}, (...args) => { result.push(args) });
 			assert.deepEqual([['c'], ['e']], result);
 		});
 		
 		test('scope passed', () =>
 		{
-			let scope;
+			var scope;
+			
 			foreach.value([2], function () { scope = this; }, 1);
-			assert.strictEqual(1, scope);
+			assert.equal(1, scope);
 			
 			scope = null;
 			foreach.value({'a': 2}, function () { scope = this; }, 1);
-			assert.strictEqual(1, scope);
+			assert.equal(1, scope);
 		});
 		
 		test('invalid subject, error thrown', () =>
@@ -55,8 +56,8 @@ suite('foreach module', () =>
 	{
 		test('array subject', () =>
 		{
-			let result = [];
-			let subject = ['b', 'c'];
+			var result = [];
+			var subject = ['b', 'c'];
 			
 			subject.e = 1;
 			
@@ -66,20 +67,20 @@ suite('foreach module', () =>
 		
 		test('object subject', () =>
 		{
-			let result = [];
+			var result = [];
 			foreach.key({'b': 'c', 'd': 'e'}, (...args) => { result.push(args) });
 			assert.deepEqual([['b'], ['d']], result);
 		});
 		
 		test('scope passed', () =>
 		{
-			let scope;
+			var scope;
 			foreach.key([2], function () { scope = this; }, 1);
-			assert.strictEqual(1, scope);
+			assert.equal(1, scope);
 			
 			scope = null;
 			foreach.key({'a': 2}, function () { scope = this; }, 1);
-			assert.strictEqual(1, scope);
+			assert.equal(1, scope);
 		});
 		
 		test('invalid subject, error thrown', () =>
@@ -96,8 +97,8 @@ suite('foreach module', () =>
 	{
 		test('array subject', () =>
 		{
-			let result = [];
-			let subject = ['b', 'c'];
+			var result = [];
+			var subject = ['b', 'c'];
 			
 			subject.e = 1;
 			
@@ -107,20 +108,20 @@ suite('foreach module', () =>
 		
 		test('object subject', () =>
 		{
-			let result = [];
+			var result = [];
 			foreach.pair({'b': 'c', 'd': 'e'}, (...args) => { result.push(args) });
 			assert.deepEqual([['b', 'c'], ['d', 'e']], result);
 		});
 		
 		test('scope passed', () =>
 		{
-			let scope;
+			var scope;
 			foreach.pair([2], function () { scope = this; }, 1);
-			assert.strictEqual(1, scope);
+			assert.equal(1, scope);
 			
 			scope = null;
 			foreach.pair({'a': 2}, function () { scope = this; }, 1);
-			assert.strictEqual(1, scope);
+			assert.equal(1, scope);
 		});
 		
 		test('invalid subject, error thrown', () =>
@@ -137,8 +138,8 @@ suite('foreach module', () =>
 	{
 		test('array subject', () =>
 		{
-			let result = [];
-			let subject = ['b', 'c'];
+			var result = [];
+			var subject = ['b', 'c'];
 			
 			subject.e = 1;
 			
@@ -148,20 +149,20 @@ suite('foreach module', () =>
 		
 		test('object subject', () =>
 		{
-			let result = [];
+			var result = [];
 			foreach.item({'b': 'c', 'd': 'e'}, (...args) => { result.push(args) });
 			assert.deepEqual([[{'b': 'c'}], [{'d': 'e'}]], result);
 		});
 		
 		test('scope passed', () =>
 		{
-			let scope;
+			var scope;
 			foreach.item([2], function () { scope = this; }, 1);
-			assert.strictEqual(1, scope);
+			assert.equal(1, scope);
 			
 			scope = null;
 			foreach.item({'a': 2}, function () { scope = this; }, 1);
-			assert.strictEqual(1, scope);
+			assert.equal(1, scope);
 		});
 		
 		test('invalid subject, error thrown', () =>
