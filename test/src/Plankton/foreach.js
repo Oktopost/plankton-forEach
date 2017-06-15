@@ -1,6 +1,3 @@
-'use strict';
-
-
 const foreach = require('../../index').foreach;
 const assert = require('chai').assert;
 

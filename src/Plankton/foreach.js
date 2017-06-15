@@ -1,8 +1,5 @@
-require('../namespace').namespace('Plankton', function (root) 
+namespace('Plankton', function (root) 
 {
-	'use strict';
-	
-	
 	var is		= root.Plankton.is;
 	var obj		= root.Plankton.obj;
 	var array	= root.Plankton.array;
@@ -26,7 +23,8 @@ require('../namespace').namespace('Plankton', function (root)
 	
 	
 	/**
-	 * @name Plankton.foreach
+	 * @class Plankton.foreach
+	 * @alias foreach
 	 * 
 	 * @param {Array|Object} subject
 	 * @param {function(*)} callback

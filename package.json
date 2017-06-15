@@ -30,9 +30,9 @@
     "mocha": "^3.2.0"
   },
   "dependencies": {
-    "oktopost-plankton-is": "^1.0.0",
-    "oktopost-plankton-obj": "^1.0.1",
-    "oktopost-plankton-array": "^1.0.0",
-    "oktopost-namespace": "^1.2.0"
+    "oktopost-plankton-is": "https://github.com/Oktopost/plankton-is.git#f45ca73",
+    "oktopost-plankton-obj": "https://github.com/Oktopost/plankton-obj.git#f8dc626",
+    "oktopost-plankton-array": "https://github.com/Oktopost/plankton-array.git#42db650",
+    "oktopost-namespace": "https://github.com/Oktopost/namespace.git#32d6f41"
   }
 }

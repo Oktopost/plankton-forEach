@@ -1,8 +1,2 @@
-'use strict';
-
-
-var Plankton = require('./namespace').Plankton;
-
-require('./src/foreach');
-
-module.exports = Plankton;
+var root = require('oktopost-namespace').dynamic(__dirname);
+module.exports = root.Plankton.foreach;
